@@ -26,6 +26,10 @@ export const invite = {
     lng: 0,
   },
   closing: "With love & blessings — see you there",
+  /** Production URL of this invite (no trailing slash) — used for og:url and og:image */
+  siteUrl: "https://amardeeep-weds-simran.invitingyou.top",
+  /** Share image file in `public/` — save the wedding card graphic as `public/og.jpg` (ideal size 1200×630) */
+  ogImage: "/og.jpg",
 } as const;
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -33,3 +37,7 @@ export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encode
 )}`;
 
 export const directionsUrl = "https://share.google/vg0UrcXAn4PbNgulR";
+
+export const siteUrl = invite.siteUrl;
+
+export const ogImageUrl = `${invite.siteUrl}${invite.ogImage}`;

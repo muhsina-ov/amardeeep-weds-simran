@@ -10,7 +10,7 @@ import { InviteFooter } from "@/components/invite/InviteFooter";
 import { Note } from "@/components/invite/Note";
 import { ScrollThread } from "@/components/invite/ScrollThread";
 import { Venue } from "@/components/invite/Venue";
-import { invite } from "@/config/invite";
+import { invite, ogImageUrl, siteUrl } from "@/config/invite";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 
@@ -25,9 +25,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: `${title} · Save the Date` },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${siteUrl}/` },
       { property: "og:site_name", content: `${invite.groom} & ${invite.bride}` },
-      { property: "og:image", content: "/og.jpg" },
+      { property: "og:image", content: ogImageUrl },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       {
@@ -38,9 +38,9 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: `${title} · Save the Date` },
       { name: "twitter:description", content: description },
-      { name: "twitter:image", content: "/og.jpg" },
+      { name: "twitter:image", content: ogImageUrl },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${siteUrl}/` }],
   }),
   component: Invitation,
 });

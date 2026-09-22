@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { invite } from "../config/invite";
+import { invite, ogImageUrl } from "../config/invite";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -90,9 +90,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: `${invite.groom} & ${invite.bride} invite you to their wedding on ${invite.dayLine} at ${invite.venue.name}.`,
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/og.jpg" },
+      { property: "og:image", content: ogImageUrl },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "/og.jpg" },
+      { name: "twitter:image", content: ogImageUrl },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
