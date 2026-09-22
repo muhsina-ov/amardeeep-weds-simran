@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { invite } from "../config/invite";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -77,14 +78,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "InviteStory" },
-      { name: "description", content: "Digital wedding invitation" },
-      { name: "author", content: "InviteStory" },
-      { property: "og:title", content: "InviteStory" },
-      { property: "og:description", content: "Digital wedding invitation" },
+      { title: `${invite.groom} & ${invite.bride} · Save the Date` },
+      {
+        name: "description",
+        content: `${invite.groom} & ${invite.bride} invite you to their wedding on ${invite.dayLine} at ${invite.venue.name}.`,
+      },
+      { name: "author", content: `${invite.groom} & ${invite.bride}` },
+      { property: "og:title", content: `${invite.groom} & ${invite.bride} · Save the Date` },
+      {
+        property: "og:description",
+        content: `${invite.groom} & ${invite.bride} invite you to their wedding on ${invite.dayLine} at ${invite.venue.name}.`,
+      },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/og.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@invitestory.in" },
+      { name: "twitter:image", content: "/og.jpg" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
