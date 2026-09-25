@@ -13,7 +13,7 @@ export const invite = {
   /** IANA timezone of the venue */
   timeZoneOffset: "+05:30",
   dayLine: "Saturday–Sunday, 12th–13th December 2026",
-  timeLine: "Festivities from 10:00 AM onwards",
+  timeLine: "Festivities from 10:00 AM",
   eventTitle: "Wedding of Amardeep & Simran",
   invitationNote:
     "With the blessings of Waheguru Ji and our families, we invite you to celebrate the wedding of Amardeep & Simran — two days of love, laughter, Anand Karaj and togetherness.",
