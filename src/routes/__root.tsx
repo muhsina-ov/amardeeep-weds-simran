@@ -78,13 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${invite.groom} & ${invite.bride} · Save the Date` },
+      { title: `${invite.groom} & ${invite.bride} · Wedding Card` },
       {
         name: "description",
         content: `${invite.groom} & ${invite.bride} invite you to their wedding on ${invite.dayLine} at ${invite.venue.name}.`,
       },
       { name: "author", content: `${invite.groom} & ${invite.bride}` },
-      { property: "og:title", content: `${invite.groom} & ${invite.bride} · Save the Date` },
+      { property: "og:title", content: `${invite.groom} & ${invite.bride} · Wedding Card` },
       {
         property: "og:description",
         content: `${invite.groom} & ${invite.bride} invite you to their wedding on ${invite.dayLine} at ${invite.venue.name}.`,

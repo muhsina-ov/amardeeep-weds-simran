@@ -1,6 +1,6 @@
 import { motion, useReducedMotion, useTransform } from "motion/react";
 import { useCallback, useRef, useState } from "react";
-const couple = "https://media.invitestory.in/marigold-bhavan/src/assets/couple.png";
+import couple from "@/assets/couple.png";
 import { invite } from "@/config/invite";
 import { useParallax } from "@/hooks/use-parallax";
 import { getLenis } from "@/lib/lenis";
@@ -59,7 +59,7 @@ export function Hero({ ready = true }: { ready?: boolean }) {
         animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
         transition={{ duration: 1, ease }}
       >
-        Save the date
+        Wedding Card
       </motion.p>
 
       <motion.p

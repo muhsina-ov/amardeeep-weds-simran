@@ -77,7 +77,7 @@ export function Envelope({ onOpen }: { onOpen?: () => void }) {
         </div>
 
         <div className="relative flex h-full flex-col items-center justify-center px-10 text-center">
-          <p className="caps text-[0.55rem] text-sepia/90">Save the date</p>
+          <p className="caps text-[0.55rem] text-sepia/90">Wedding Card</p>
           <Flourish className="mt-3 w-32 text-gold/70" />
           <p className="script mt-4 text-[3rem] leading-tight text-ink sm:text-[3.75rem]">
             You&apos;re invited
@@ -88,7 +88,7 @@ export function Envelope({ onOpen }: { onOpen?: () => void }) {
           <Flourish className="w-24 rotate-180 text-gold/50" />
           <p className="caps mt-5 text-[0.6rem] text-ink/80">{invite.dateLabel}</p>
           <p className="caps mt-3 text-[0.48rem] text-sepia/75">{invite.venue.name}</p>
-          <p className="caps mt-2 text-[0.44rem] text-sepia/50">Hotel G20 Inn</p>
+          <p className="caps mt-2 text-[0.44rem] text-sepia/50">Kota, Rajasthan</p>
         </div>
       </div>
 

@@ -18,12 +18,12 @@ export const invite = {
   invitationNote:
     "With the blessings of Waheguru Ji and our families, we invite you to celebrate the wedding of Amardeep & Simran — two days of love, laughter, Anand Karaj and togetherness.",
   venue: {
-    name: "Hotel G20 Inn",
-    address: "Hotel G20 Inn — tap Get Directions for the map & full address",
+    name: "5 Flowers Ananta Elite",
+    address: "5 Flowers Ananta Elite, Kota — tap Get Directions for the map & full address",
     /** Used for the Google Maps deep link */
-    query: "Hotel G20 Inn",
-    lat: 0,
-    lng: 0,
+    query: "5 Flowers Ananta Elite Kota",
+    lat: 25.1611028,
+    lng: 75.8694047,
   },
   closing: "With love & blessings — see you there",
   /** Production URL of this invite (no trailing slash) — used for og:url and og:image */
@@ -32,11 +32,9 @@ export const invite = {
   ogImage: "/og.jpg",
 } as const;
 
-export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  invite.venue.query,
-)}`;
+export const mapsUrl = "https://maps.app.goo.gl/iXg98TjPpPrxrViF6";
 
-export const directionsUrl = "https://share.google/vg0UrcXAn4PbNgulR";
+export const directionsUrl = "https://maps.app.goo.gl/iXg98TjPpPrxrViF6";
 
 export const siteUrl = invite.siteUrl;
 

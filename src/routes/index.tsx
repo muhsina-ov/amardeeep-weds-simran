@@ -7,6 +7,7 @@ import { Countdown } from "@/components/invite/Countdown";
 import { Envelope } from "@/components/invite/Envelope";
 import { Hero } from "@/components/invite/Hero";
 import { InviteFooter } from "@/components/invite/InviteFooter";
+import { MusicPlayer } from "@/components/invite/MusicPlayer";
 import { Note } from "@/components/invite/Note";
 import { ScrollThread } from "@/components/invite/ScrollThread";
 import { Venue } from "@/components/invite/Venue";
@@ -20,9 +21,9 @@ const description = `${invite.groom} & ${invite.bride} invite you to their weddi
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${title} · Save the Date` },
+      { title: `${title} · Wedding Card` },
       { name: "description", content: description },
-      { property: "og:title", content: `${title} · Save the Date` },
+      { property: "og:title", content: `${title} · Wedding Card` },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${siteUrl}/` },
@@ -36,7 +37,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: `${title} · Save the Date` },
+      { name: "twitter:title", content: `${title} · Wedding Card` },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: ogImageUrl },
     ],
@@ -52,6 +53,7 @@ function Invitation() {
   return (
     <>
       <Envelope onOpen={() => setOpened(true)} />
+      <MusicPlayer autoPlayTrigger={opened} />
       <ScrollThread />
       <main
         className="grain relative min-h-screen bg-paper text-ink"
@@ -66,6 +68,5 @@ function Invitation() {
       </main>
       <ActionBar />
     </>
-
   );
 }
